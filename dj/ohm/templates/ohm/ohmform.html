@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		    <meta charset="UTF-8">
+		      <title>抵抗合成プログラム</title>
+	</head>
+	<body>
+		<h1>抵抗合成プログラム</h1>
+		<p>E24系列2本を使って要求された抵抗値に<br>
+		できるだけ近い組み合わせを作ります。
+		<p>合成したい抵抗値を入力してください。
+		<form action="" method="post">{% csrf_token %}
+			<p>{{ form.value}}
+			{{ form.select}}
+			<input type="submit" value="search">
+			{{form.message | safe}}
+		</form>
+	</body>
+</html>
